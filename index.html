@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tiny apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@700&display=swap">
+<style>
+  :root{--bg:#f5f6f9;--card:#fff;--ink:#16171d;--muted:#5f6476;--line:#dcdfe8;--accent:#d9077a}
+  @media (prefers-color-scheme: dark){:root{--bg:#111217;--card:#191a21;--ink:#eceef4;--muted:#9ba1b3;--line:#2b2e3a;--accent:#ff4ba5;color-scheme:dark}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Golos Text",system-ui,sans-serif;padding:40px 16px}
+  main{max-width:40rem;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+  h1{font-family:"Unbounded",system-ui,sans-serif;font-size:1.8rem;margin:0}
+  p{margin:0;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:12px}
+  a.card{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:inherit;text-decoration:none}
+  a.card:hover{border-color:var(--accent)}
+  a.card b{font-size:1.15rem}
+  a.card span{color:var(--accent);font-weight:600;margin-top:6px}
+</style>
+</head>
+<body>
+<main>
+  <h1>Tiny apps</h1>
+  <p>Маленькие приложения, которые работают прямо в браузере.</p>
+  <div class="grid">
+    <a class="card" href="babbler/">
+      <b>Бабблер</b>
+      <p>Комиксные бабблы поверх фото из галереи, экспорт в PNG.</p>
+      <span>Открыть →</span>
+    </a>
+    <a class="card" href="checklist/">
+      <b>Список</b>
+      <p>Простой список дел с галочками, хранится в браузере.</p>
+      <span>Открыть →</span>
+    </a>
+  </div>
+</main>
+</body>
+</html>

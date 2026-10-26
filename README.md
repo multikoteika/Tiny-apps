@@ -1,4 +1,16 @@
-  Small tools:
----
-1. Checklist - daily task list  https://github.com/mkote9/Tiny-apps/blob/main/Checklist.html
-2. Babbler - a small tool for creating comics  https://github.com/multikoteika/Tiny-apps/blob/main/Babbler.html
+# Tiny apps
+
+Маленькие приложения, которые работают прямо в браузере — без установки и сборки.
+
+| Приложение | Что делает | Открыть |
+|---|---|---|
+| **Бабблер** | Комиксные бабблы поверх фото из галереи, экспорт в PNG | [babbler/](https://multikoteika.github.io/Tiny-apps/babbler/) |
+| **Список** | Список дел с галочками, хранится в браузере | [checklist/](https://multikoteika.github.io/Tiny-apps/checklist/) |
+
+Все приложения: https://multikoteika.github.io/Tiny-apps/
+
+## Как это устроено
+
+Каждое приложение — один файл `index.html` в своей папке. GitHub Pages отдаёт их как обычные веб-страницы.
+
+Данные (пресеты Бабблера, задачи Списка) хранятся в `localStorage` браузера, в котором открыто приложение, и на другие устройства не переносятся. Для пресетов есть экспорт и импорт в файл.
