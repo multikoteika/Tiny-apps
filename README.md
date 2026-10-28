@@ -6,7 +6,7 @@
 |---|---|---|
 | **Бабблер** | Комиксные бабблы поверх фото из галереи, экспорт в PNG | [babbler/](https://multikoteika.github.io/Tiny-apps/babbler/) |
 | **Список** | Список дел с галочками, хранится в браузере | [checklist/](https://multikoteika.github.io/Tiny-apps/checklist/) |
-| **Cube Solver** | Разметка кубика Рубика 3×3 и пошаговая анимированная сборка, есть режим кубика с картинками | [cube-solver/](https://multikoteika.github.io/Tiny-apps/cube-solver/) |
+| **Cube Solver** | Разметка кубика Рубика любого размера (от 2×2 до 20×20) и пошаговая анимированная сборка, есть режим кубика с картинками | [cube-solver/](https://multikoteika.github.io/Tiny-apps/cube-solver/) |
 
 Все приложения: https://multikoteika.github.io/Tiny-apps/
 
