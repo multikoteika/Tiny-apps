@@ -15,16 +15,26 @@
   main{max-width:40rem;margin:0 auto;display:flex;flex-direction:column;gap:24px}
   h1{font-family:"Unbounded",system-ui,sans-serif;font-size:1.8rem;margin:0}
   p{margin:0;color:var(--muted)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:12px}
+  /* one column on phones, two from 700px — widths where every description fits in two lines */
+  .grid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media (min-width:700px){.grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:400px){a.card{padding:16px 14px} a.card p{font-size:14px}}
   a.card{--c-bg:var(--card);--c-ink:var(--ink);--c-muted:var(--muted);--c-line:var(--line);--c-accent:var(--accent);
     display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--c-line);border-radius:14px;background:var(--c-bg);color:var(--c-ink);text-decoration:none}
   a.card:hover{border-color:var(--c-accent)}
-  a.card p{color:var(--c-muted)}
+  /* description: always exactly two lines so the cards stay the same height */
+  a.card p{color:var(--c-muted);line-height:1.45;height:2.9em;max-width:19rem;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2}
   a.card b{font-size:1.15rem}
   a.card span{color:var(--c-accent);font-weight:600;margin-top:6px}
   /* Checklist palette */
   a.card.check{--c-bg:#edf1f0;--c-ink:#16201e;--c-muted:#586763;--c-line:#d3dbd8;--c-accent:#0e7468}
   @media (prefers-color-scheme: dark){a.card.check{--c-bg:#162120;--c-ink:#e5eeeb;--c-muted:#94a5a0;--c-line:#263431;--c-accent:#3fc9b8}}
+  /* Babbler palette: light pink tint */
+  a.card.bubble{--c-bg:#fbf0f5;--c-ink:#1d1419;--c-muted:#6d5a65;--c-line:#efd5e2;--c-accent:#d9077a}
+  @media (prefers-color-scheme: dark){a.card.bubble{--c-bg:#22161d;--c-ink:#f1e8ed;--c-muted:#b39aa8;--c-line:#3a2531;--c-accent:#ff4ba5}}
+  /* Cube Solver palette: light violet tint */
+  a.card.cube{--c-bg:#f2effc;--c-ink:#16141f;--c-muted:#5f5a78;--c-line:#ddd6f5;--c-accent:#5A2BE0}
+  @media (prefers-color-scheme: dark){a.card.cube{--c-bg:#1c1830;--c-ink:#ECEEF3;--c-muted:#a39fbf;--c-line:#2f2a4a;--c-accent:#9D84FF}}
 </style>
 </head>
 <body>
@@ -32,7 +42,7 @@
   <h1>Tiny apps</h1>
   <p>Маленькие приложения, которые работают прямо в браузере.</p>
   <div class="grid">
-    <a class="card" href="babbler/">
+    <a class="card bubble" href="babbler/">
       <b>Бабблер</b>
       <p>Комиксные бабблы поверх фото из галереи, экспорт в PNG.</p>
       <span>Открыть →</span>
@@ -40,6 +50,11 @@
     <a class="card check" href="checklist/">
       <b>Список</b>
       <p>Простой список дел с галочками, хранится в браузере.</p>
+      <span>Открыть →</span>
+    </a>
+    <a class="card cube" href="cube-solver/">
+      <b>Cube Solver</b>
+      <p>Раскрасьте кубик Рубика, и он покажет, как его собрать.</p>
       <span>Открыть →</span>
     </a>
   </div>
